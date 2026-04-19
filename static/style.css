@@ -1,0 +1,36 @@
+body {
+    font-family: Arial;
+    background: linear-gradient(to right, #0f39f2, #c57c0e);
+    color: white;
+    text-align: center;
+    margin-top: 50px;
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+textarea {
+    width: 300px;
+    height: 100px;
+    border-radius: 10px;
+    padding: 10px;
+    border: none;
+}
+
+select, button {
+    padding: 8px;
+    margin: 5px;
+    border-radius: 5px;
+    border: none;
+}
+
+button {
+    background-color: #ff7eb3;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #ff4f8b;
+}

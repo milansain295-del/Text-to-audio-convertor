@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Text to Audio</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<h2>Text to Audio Converter 🔊</h2>
+
+<form method="POST" enctype="multipart/form-data">
+    <textarea name="text" rows="5" cols="40" placeholder="Enter text..."></textarea><br><br>
+    <input type="file" name="file">
+    <br><br>
+    <label>Language:</label>
+    <select name="lang">
+        <option value="en">English</option>
+        <option value="hi">Hindi</option>
+    </select><br><br>
+
+    <label>Speed:</label>
+    <select name="speed">
+        <option value="normal">Normal</option>
+        <option value="slow">Slow</option>
+    </select><br><br>
+
+    <button type="submit">Convert</button>
+</form>
+
+<br>
+
+{% if audio_file %}
+    <audio controls>
+        <source src="{{ audio_file }}" type="audio/mpeg">
+    </audio>
+    <br><br>
+    <a href="{{ audio_file }}" download>Download Audio</a>
+{% endif %}
+
+</body>
+</html>
